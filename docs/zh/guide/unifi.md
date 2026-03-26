@@ -11,9 +11,15 @@
 
 在 **Settings > Networks** 中编辑 LAN 网络，设置 DNS：
 
-- **DNS Server**：选择 **Manual**
+- **DNS Server**：选择 **v6-Manual**
 - **DNS Server 1**：`192.168.1.2`
 - **DNS Server 2**：可选填运营商 DNS
+
+可选 **有v6环境并已打开** 中编辑 LAN 网络，设置 DNS：
+
+- **DNS Server**：选择 **v6-Manual**
+- **DNS Server 1**：`fe80::1`
+- **DNS Server 2**：可选填运营商 v6DNS
 
 ## 步骤二：添加静态路由（FakeIP）
 
@@ -37,12 +43,12 @@
 - **Next Hop**：`192.168.1.2`
 - **Type**：Next Hop（或网关）
 
-在 **有v6环境并已打开** 需新增路由：
+可选 **有v6环境并已打开** 需新增路由：
 
 **FakeIP v6**
-- **Destination Network**：`1.1.1.1/32`
+- **Destination Network**：`fe80::1`
 - **接口**：`Internet 出口`
-- **Next Hop**：`192.168.1.2`
+- **Next Hop**：`f2b0::/18`
 - **Type**：Next Hop（或网关）
 
 ## 步骤三： 可选：Telegram 路由
