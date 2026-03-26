@@ -46,6 +46,7 @@
 可选 **有v6环境并已打开** 需新增路由：
 
 **FakeIP v6**
+- #局域网v6地址#
 - **Destination Network**：`fe80::1`
 - **接口**：`Internet 出口`
 - **Next Hop**：`f2b0::/18`
